@@ -191,13 +191,20 @@ td:first-child {
                for(var h = 0; h < vMixInputs.length; h++){
                   for(var j = 0; j < activeInputs.length; j++){
                      if(vMixInputs[h] == (activeInputs[j] - 1)){
+                        if(data.getElementsByTagName("input")[vMixInputs[h]].getAttribute("audiobusses") !== null){
+                           matchedInputs.push(vMixInputs[h])
+                        }
+
                         //console.log("Match at " + activeBuses[j] + ", input " + (i+1))
-                        matchedInputs.push(vMixInputs[h])
                      }
                   }
                }
             }else{
-               matchedInputs = vMixInputs;
+               for(var j = 0; j < vMixInputs.length; j++){
+                  if(data.getElementsByTagName("input")[vMixInputs[j]].getAttribute("audiobusses") !== null){
+                     matchedInputs.push(vMixInputs[j])
+                  }
+               }
             }
             table = [];
             for(var i = 0; i < matchedInputs.length; i++){
