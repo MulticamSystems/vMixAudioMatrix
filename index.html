@@ -211,7 +211,7 @@ td:first-child {
                }
             }
             for(var j = 0; j < excludeInputs.length; j++){
-               var index = matchedInputs.indexOf(parseInt(excludeInputs[j]));
+               var index = matchedInputs.indexOf(parseInt(excludeInputs[j] - 1));
                if (index > -1) {
                   matchedInputs.splice(index, 1);
                }
