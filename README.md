@@ -1,5 +1,7 @@
 # vMixAudioMatrix
 
+![Example output](https://i.imgur.com/b5tvIvE.png)
+
 Online live version available here:
 http://njastad.com/vMixAudioMatrix/
 
