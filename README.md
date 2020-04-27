@@ -31,6 +31,12 @@ Default: no filter, shows all inputs
 Syntax: Inputs=1,2,4
 ```
 
+"Exclude" exclude inputs from the list. 
+Default: no filter
+```
+Syntax: Exclude=1,2,3
+```
+
 "Buses" Filters for specific Buses. 
 Default: no filter, shows all buses
 ```
