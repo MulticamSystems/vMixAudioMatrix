@@ -135,6 +135,7 @@ td:first-child {
       var port = "8088";
       var activeBuses = [];
       var activeInputs = [];
+      var excludeInputs = [];
       var friendlyNames = {};
       var updateInterval = 100;
       var lastTable;
@@ -156,6 +157,9 @@ td:first-child {
       }
       if(vars["Inputs"]){
          activeInputs = vars["Inputs"].split(",");
+      }
+      if(vars["Exclude"]){
+         excludeInputs = vars["Exclude"].split(",");
       }
       if(vars["Names"]){
          for(var i = 0; i < vars["Names"].split(",").length; i++){
@@ -204,6 +208,12 @@ td:first-child {
                   if(data.getElementsByTagName("input")[vMixInputs[j]].getAttribute("audiobusses") !== null){
                      matchedInputs.push(vMixInputs[j])
                   }
+               }
+            }
+            for(var j = 0; j < excludeInputs.length; j++){
+               var index = matchedInputs.indexOf(parseInt(excludeInputs[j]));
+               if (index > -1) {
+                  matchedInputs.splice(index, 1);
                }
             }
             table = [];
