@@ -62,3 +62,9 @@ Default: none
 ```
 Syntax: Names=M:Live Output,B:Speakers
 ```
+
+"Title" Sets a custom title at the top of the page.
+Default: none
+```
+Syntax: Title=ReplayPC
+```
